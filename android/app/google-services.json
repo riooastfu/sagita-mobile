@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "574501137641",
+    "firebase_url": "https://other-project-3131c-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "other-project-3131c",
+    "storage_bucket": "other-project-3131c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574501137641:android:5c1e30a32e4c06d2f29478",
+        "android_client_info": {
+          "package_name": "com.stagita"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574501137641-a7ftfm6bgk7jn3fo6hhs6tva6av7ht27.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXP8MXl-BDIJeJDwgp9hizj3EVSIK_BVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574501137641-a7ftfm6bgk7jn3fo6hhs6tva6av7ht27.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

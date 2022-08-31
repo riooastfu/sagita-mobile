@@ -1,0 +1,53 @@
+import { StyleSheet, Text, View, Alert } from "react-native"
+import React from 'react'
+import SplashScreen from "react-native-splash-screen"
+import { useEffect, useState } from "react"
+import LoginProvider from "./utility/LoginProvider"
+import AppStack from "./AppStack"
+import NotifService from "./utility/NotifService"
+
+
+
+const App = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      SplashScreen.hide();
+    }, 2000)
+    
+   }, [])
+
+  //----------------------------Push Notif--------------------------//
+  //----------------------------------------------------------------//
+  const [registerToken, setRegisterToken] = useState('');
+  const [fcmRegistered, setFcmRegistered] = useState(false); 
+
+  const onRegister = (token) => {
+    setRegisterToken(token.token);
+    setFcmRegistered(true)
+  };
+
+  const onNotif = (notif) => {
+    Alert.alert(notif.title, notif.message)
+  };
+
+  const notif = new NotifService(onRegister, onNotif);
+
+  //-------------------------End ofPush Notif-----------------------//
+  //----------------------------------------------------------------//
+
+    return (
+      <View style={styles.containerApps}>
+        <LoginProvider>
+          <AppStack/>
+        </LoginProvider>   
+      </View>
+    )
+  }
+  
+  export default App
+
+  const styles = StyleSheet.create({
+  containerApps: {
+    flex: 1
+  }
+})
